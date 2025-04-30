@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Change Over Note Sharing</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+  <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-lg">
+    <h1 class="text-2xl font-bold mb-4 text-center">Change Over Note Sharing</h1>
+    <form id="noteForm" class="space-y-4">
+      <div>
+        <label for="senderEmail" class="block font-semibold mb-1">Sender Email</label>
+        <input type="email" id="senderEmail" name="senderEmail" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      </div>
+      <div>
+        <label for="senderPassword" class="block font-semibold mb-1">Sender Email Password</label>
+        <input type="password" id="senderPassword" name="senderPassword" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      </div>
+      <div>
+        <label for="noteContent" class="block font-semibold mb-1">Note Content</label>
+        <textarea id="noteContent" name="noteContent" rows="5" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+      </div>
+      <div id="recipientsContainer">
+        <label class="block font-semibold mb-1">Recipient Emails (at least 5)</label>
+        <div class="space-y-2">
+          <input type="email" name="recipientEmail" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Recipient Email 1" />
+          <input type="email" name="recipientEmail" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Recipient Email 2" />
+          <input type="email" name="recipientEmail" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Recipient Email 3" />
+          <input type="email" name="recipientEmail" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Recipient Email 4" />
+          <input type="email" name="recipientEmail" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Recipient Email 5" />
+        </div>
+      </div>
+      <button type="button" id="addRecipientBtn" class="mt-2 text-blue-600 hover:underline">Add another recipient</button>
+      <div>
+        <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-700 transition">Send Note</button>
+      </div>
+    </form>
+    <div id="statusMessage" class="mt-4 text-center font-semibold"></div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
