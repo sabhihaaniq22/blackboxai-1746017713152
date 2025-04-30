@@ -1,0 +1,16 @@
+{
+  "name": "changeover-note-app",
+  "version": "1.0.0",
+  "description": "Desktop app to share notes via email to multiple users",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "electron": "^25.3.1",
+    "nodemailer": "^6.9.4"
+  },
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
+}
